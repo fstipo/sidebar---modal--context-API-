@@ -6,11 +6,11 @@ import Modal from "./Modal";
 const App = () => {
   console.log(links)
   return (
-    <main>
+    <>
       <Home />
-      <Sidebar />
-      <Modal />
-    </main>
+      {/* <Sidebar />
+      <Modal /> */}
+    </>
   );
 };
 export default App;
