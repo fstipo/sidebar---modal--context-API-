@@ -259,12 +259,11 @@ Project CSS
 */
 
 main {
-  position: relative;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--grey-200);
+  background: var(--grey-100);
 }
 
 .sidebar-toggle {
@@ -291,24 +290,52 @@ main {
   }
 }
 
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1000;
-  padding: 5rem 10rem;
-  background: var(--white);
-  border: transparent;
-  border-radius: var(--borderRadius);
-  box-shadow: var(--shadow-4);
+/*
+=============== 
+Modal
+===============
+*/
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
 }
-.icon {
+
+.show-modal {
+  z-index: 10;
+  visibility: visible;
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 2s;
+}
+
+.modal-container {
+  position: relative;
+  background: var(--white);
+  width: 90vw;
+  height: 30vh;
+  border-radius: var(--borderRadius);
+  max-width: var(--fixed-width);
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+
+.close-modal-btn {
   position: absolute;
-  font-size: 1rem;
-  font-weight: 900;
-  color: red;
-  top: 20px;
-  right: 20px;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  color: var(--red-dark);
   cursor: pointer;
 }

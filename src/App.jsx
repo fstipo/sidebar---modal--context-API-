@@ -10,7 +10,7 @@ const App = () => {
     <>
       <Home />
       <Sidebar />
-      {isModalOpen && <Modal />}
+      <Modal />
     </>
   );
 };
