@@ -259,6 +259,7 @@ Project CSS
 */
 
 main {
+  position: relative;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -288,4 +289,26 @@ main {
   100% {
     transform: scale(1);
   }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  padding: 5rem 10rem;
+  background: var(--white);
+  border: transparent;
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-4);
+}
+.icon {
+  position: absolute;
+  font-size: 1rem;
+  font-weight: 900;
+  color: red;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
 }
